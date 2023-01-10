@@ -5,6 +5,8 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.doReturn;
@@ -75,4 +77,19 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void selecting_items_Sweet_corn_soup_and_Vegetable_lasagne_from_menu_should_return_total_order_value_388() {
+
+        //Following items are selected by user to get total order value
+        List<String> Itemlist = new ArrayList<>();
+        Itemlist.add("Vegetable lasagne");
+        Itemlist.add("Sweet corn soup");
+
+        assertNotNull(restaurant.getMenu()); //menu is not empty
+        assertEquals(388,restaurant.selectFromMenu(Itemlist));
+
+
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 }
