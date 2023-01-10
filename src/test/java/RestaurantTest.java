@@ -88,7 +88,6 @@ class RestaurantTest {
         assertNotNull(restaurant.getMenu()); //menu is not empty
         assertEquals(388,restaurant.selectFromMenu(Itemlist));
 
-
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
